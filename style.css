@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+body::before {
+    display: block;
+    content: '';
+    height: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    display: inline-block;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #f6f6f6;
+    
+}
+
+.full-header {
+    display: none;
+}
+
+.header-main {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.header-main h1 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    /* color:rgba(82, 17, 60, 0.8); */
+    letter-spacing: 1.2px;
+    margin-bottom: 0;
+    color: rgb(161, 16, 35);
+    
+}
+
+.mobile-header {
+    font-weight: 700;
+    margin-bottom: 0;
+    color: rgb(161, 16, 35);
+}
+
+.mobile-search {
+   
+    margin-bottom: 0;
+}
+
+
+
+
+
+@media(min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid rgba(50, 0, 0, 0.2);
+        
+    }
+
+    .full-header {
+        width: 100%;
+        padding: 0.5em 1.5em 0 1.5em;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-items: center;
+        font-size: 1.2rem; 
+        
+
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .mobile-search {
+        display: none;
+    }
+
+    body::before {
+        display: block;
+        content: '';
+        height: 120px;
+    }
+
+    .search-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+}
+
+.logo-head {
+    width: 80px;
+    height: 80px;
+    margin-left: 0.25em;
+    margin-bottom: 0;
+    
+}
+
+.logo-nav {
+    width: 50px;
+    height: 50px;
+    margin-left: 0.5em;
+}
+
+.navbar {
+    padding-top: 0.5em;
+    /* font-size: 0.9rem; */
+    background: #f6f6f6;
+}
+
+.nav-item {
+    margin: 0 0.5em;
+    font-size: 1.5rem;
+}
+
+@media(min-width: 768px) {
+    .nav-item {
+        margin: 0 1.5em;
+        font-size: 1rem;
+    }
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: rgb(161, 16, 35);
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+}
+
+.offcanvas {
+    max-width: 70%;
+    
+}
+
+.offcanvas-title {
+    color: rgb(161, 16, 35);
+    font-weight: 700;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.get-in-touch {
+    display: flex;
+    align-items: center;
+}
+
+.get-in-touch p {
+    margin-bottom: 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    gap: 1em;
+    margin: 0;
+    
+}
+
+.social-icon a {
+    color: black;
+}
+
+.social-icon a:hover,
+.social-icon a:focus {
+    color: rgb(161, 16, 35);
+}
+
+/* main */
+
+.carousel-top {
+    width: 100%;
+    position: relative;
+    
+}
+
+.carousel-top img {
+    height: 60vh;
+    object-fit: cover;
+}
+
+.inner {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    font-weight: 700;
+    display: block;
+    text-align: left;
+    max-width: 60%;
+}
+
+.inner-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-shadow: #000 0px 2px 4px;
+    
+}
+
+.inner-inverse {
+    color: #000;
+}
+
+@media(min-width: 768px) {
+
+    .carousel-top img {
+        height: 80vh;
+        margin-bottom: 1.5em;
+    }
+
+    .inner {
+        top: 300px;
+    }
+
+    .inner-title {
+        
+        font-size: 3.5rem;
+        
+    }
+}
+
+/* article grid */
+
+.article-container {
+    position: relative;
+    margin-top: 2em;
+}
+
+.trending-topics {
+    position: inherit;
+    width: 250px;
+    padding: 1em 0.5em;
+    border: 4px rgb(161, 16, 35) solid;
+    box-shadow: -1.5em 1em 1.5em -1em rgb(161, 16, 35);
+    margin: 0 auto 1em auto;
+    border-radius :25px;
+    z-index: 1;
+    background: white;
+    /* display: none; */
+}
+
+.trending-topics-text {
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    
+}
+
+.article-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    text-align: center;
+    
+    
+}
+
+.article,
+.article-lg {
+    margin: 1em;
+    box-shadow: 0.75em 0.5em 1em -1em;
+    border-radius: 5px;
+    min-width: 250px;
+    max-width: 300px;
+    padding-bottom: 1em;
+}
+
+.article-title {
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.article-img {
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+
+.catagory {
+    font-weight: 900;
+    color: rgb(161, 16, 35);
+    text-transform: uppercase;
+    margin-top: 0.5em;
+}
+
+
+
+@media(min-width: 968px) {
+    .article-grid {
+        grid-template-columns: repeat(4, 1fr); 
+        border-top: black 2px solid;  
+        padding: 3.5em 0;   
+        overflow-x: hidden;  
+    }
+
+    .article-container {
+        max-width: 100%;
+    }
+
+    .trending-topics {
+        position: absolute;        
+        top: -40px;
+        left: 28em;
+        margin-bottom: 0;
+        width: 350px;
+        
+    }
+    
+}
+
+/* latest articles */
+
+.articles-latest {
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto 1em auto;
+    padding: 0.5em 1em 0 1em;
+    
+
+}
+
+.article-latest {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    padding: 2em 0.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.article-latest-img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-title-latest {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.catagory-latest {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(161, 16, 35);
+    font-weight: 900;
+}
+
+@media(min-width: 868px) {
+
+    .articles-latest {
+        margin: 2em auto 1em auto;
+        padding: 5em 1.5em 0 1.5em;
+        border-top: solid 2px black;
+    
+    }
+
+    .article-title-latest {
+        font-weight: 900;
+        font-size: 3rem;
+    }
+
+    .article-latest-img {
+        width: 350px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .catagory-latest {
+        font-size: 1.25rem;
+    }
+}
+
