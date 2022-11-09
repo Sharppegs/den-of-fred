@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
     <link rel="stylesheet" type="text/css" href="slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick-theme.css">
+    <link rel="stylesheet" href="./aos/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Den of Fred</title>
 </head>
@@ -64,7 +65,10 @@
               <ul class="navbar-nav justify-content-center flex-grow-1">
                 
                     <li class="nav-item">
-                        <a href="#men" class="nav-link">movies</a>
+                        <a href="#" class="nav-link current-page">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./movies.html" class="nav-link">movies</a>
                     </li>
                     <li class="nav-item">
                         <a href="#men" class="nav-link">music</a>
@@ -195,8 +199,7 @@
         </div>
           <div class="articles-latest">
 
-          <div class="article-latest">
-
+          <div class="article-latest" data-aos="fade-in">
             <div class="left-image">
               <img class="article-latest-img" src="./images/redcars.jpg">
             </div>
@@ -209,7 +212,7 @@
 
           </div>
 
-          <div class="article-latest">
+          <div class="article-latest" data-aos="fade-in">
             <div class="left-image">
               <img class="article-latest-img" src="./images/show.jpg">
             </div>
@@ -221,10 +224,9 @@
             </div>
           </div>
 
-          <div class="article-latest">
+          <div class="article-latest" data-aos="fade-in">
             <div class="left-image">
-            
-              <img class="article-latest-img" src="./images/andr.jpg">
+            <img class="article-latest-img" src="./images/andr.jpg">
             </div>
 
             <div class="right-text">
@@ -236,12 +238,11 @@
 
           <div class="right-text">
 
-          <div class="article-latest">
+          <div class="article-latest" data-aos="fade-in">
             <div class="left-image">
               <img class="article-latest-img" src="./images/lotr.jpg">
             </div>
             
-
             <div class="right-text">
               <h6 class="catagory-latest">movies</h6>
               <h1 class="article-title-latest">How to Survive a 12 Hour LOTR Marathon</h1>
@@ -257,21 +258,20 @@
       </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
 </main>
+
+<footer class="footer">
+  <!-- replace with your own email address -->
+  <a href="mailto:hello@jane.dev" class="footer__link">hello@fred.com</a>
+  <div class="container">
+    <p>Copyright &copy; Phil Bolton & Fred Jequier 2022</p>
+    <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+
+</div>
+</footer>
+
 
 
 
@@ -281,6 +281,12 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick.min.js"></script>
+<script src="./aos/aos.js"></script>
+    <!-- <script>
+        AOS.init({
+        easing: 'ease-in-out-sine'
+        });
+    </script> -->
 <script src="index.js"></script>    
 </body>
 </html>
