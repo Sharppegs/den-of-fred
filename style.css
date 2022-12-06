@@ -61,7 +61,18 @@ header {
     margin-bottom: 0;
 }
 
+.individual-article-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.individual-article-image {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 60%;
+}
 
 
 
